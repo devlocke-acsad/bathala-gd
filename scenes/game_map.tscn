@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cumbg8t4yrm2k"]
+
+[node name="GameMap" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 1000)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.054902, 0.0509804, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 290.0
+offset_right = 559.0
+offset_bottom = 313.0
+text = "MAP"
+
+[node name="MapLayout" type="Node2D" parent="."]

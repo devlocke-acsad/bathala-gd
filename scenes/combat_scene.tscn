@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2r2ly1y6sbyg"]
+
+[ext_resource type="PackedScene" uid="uid://cuk4hndv5e7x5" path="res://scenes/player.tscn" id="1_ik0t7"]
+[ext_resource type="PackedScene" uid="uid://6ctpyjj2o2hq" path="res://scenes/enemy.tscn" id="2_ofoda"]
+
+[node name="CombatScene" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2000.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.054902, 0.0509804, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 328)
+
+[node name="Player" parent="." instance=ExtResource("1_ik0t7")]
+position = Vector2(248, 392)
+scale = Vector2(-2.5, 2.5)
+
+[node name="Enemy" parent="." instance=ExtResource("2_ofoda")]
+position = Vector2(888, 320)
+scale = Vector2(5, 5)
