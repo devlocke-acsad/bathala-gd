@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://6ctpyjj2o2hq"]
+[gd_scene load_steps=9 format=3 uid="uid://6ctpyjj2o2hq"]
 
 [ext_resource type="Texture2D" uid="uid://dtolnkpjxu7ix" path="res://assets/sprites/MiniAswang-Free.png" id="1_7p1mj"]
+[ext_resource type="FontFile" uid="uid://cmofqemneb5sb" path="res://assets/fonts/centrion/Centrion-Regular.otf" id="2_md0e3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md0e3"]
 atlas = ExtResource("1_7p1mj")
@@ -43,10 +44,31 @@ animations = [{
 [node name="Enemy" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -80)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_xwavj")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.36086
+frame_progress = 0.0856108
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -40)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_nenq2")
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 50.0
+step = 0.0
+show_percentage = false
+
+[node name="EnemyHealthLabel" type="Label" parent="."]
+offset_left = -32.0
+offset_right = 38.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.65098, 0.603922, 0.470588, 1)
+theme_override_fonts/font = ExtResource("2_md0e3")
+theme_override_font_sizes/font_size = 16
+text = "50 / 50"
+horizontal_alignment = 1
